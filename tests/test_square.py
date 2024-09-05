@@ -1,3 +1,9 @@
+import sys
+import os
+
+# sources 디렉터리를 모듈 경로에 추가
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../sources')))
+
 import unittest
 from sources.square import hi_square
 

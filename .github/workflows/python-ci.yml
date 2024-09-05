@@ -28,7 +28,8 @@ jobs:
     
       - name: Test with pytest
         run: |
-            python -m unittest discover -s tests -p 'test_*.py'
+            pip install pytest pytest-cov
+            pytest tests/test_*.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
 
   lint:
     runs-on: ubuntu-latest
